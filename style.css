@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100;0,400;1,400&family=Russo+One&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    --s: 34px;
+      /* control the size (the circle diameter) */
+      --c1: #ECBE13;
+      --c2: #309292;
+    
+      --_g: radial-gradient(calc(var(--s)/2), var(--c1) 97%, #0000);
+      background:
+        var(--_g), var(--_g) calc(2*var(--s)) calc(2*var(--s)),
+        repeating-conic-gradient(from 45deg, #0000 0 25%, var(--c2) 0 50%) calc(-.707*var(--s)) calc(-.707*var(--s)),
+        repeating-linear-gradient(135deg, var(--c1) calc(var(--s)/-2) calc(var(--s)/2), var(--c2) 0 calc(2.328*var(--s)));
+      background-size: calc(4*var(--s)) calc(4*var(--s));
+    
+      
+}
+
+.button-container{
+  border: 2px solid grey;
+  padding: 10px;
+  border-radius: 7px;
+  box-shadow: inset 0 20px 4px -19px rgba(255, 255, 255, 0.7);
+}
+
+button{
+  cursor: pointer;
+  outline: none;
+  width: 120px;
+  height: 75px;
+  font-family: Russo One, sans-serif;
+  font-size: 25px;
+  color: white;
+  text-shadow: 0 2px 5px black;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.18)
+}
+
+button:hover{
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.60);
+}
+
+button:active{
+  transform: translateY(3px);
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.60)
+}
