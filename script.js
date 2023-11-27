@@ -1,12 +1,13 @@
 const videoElement = document.getElementById('video');
 const button = document.getElementById('button');
+const screenPicker = document.getElementById('screenPicker');
 
 //Prompt to select a media stream, pass to video element, then play
 
 async function selectMediaStream() {
     try {
         const mediaStream = await navigator.mediaDevices.getDisplayMedia();
-        videoElement.srcObject = await mediaStream;
+        videoElement.srcObject = mediaStream;
         videoElement.onloadedmetadata = () => {
             videoElement.play();
         }
@@ -24,7 +25,7 @@ button.addEventListener('click', async () => {
     button.disabled = false;
 });
 
+//Pick a screen button
+screenPicker.addEventListener('click', selectMediaStream);
 
 
-//On load
-selectMediaStream();
